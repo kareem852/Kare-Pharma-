@@ -8,14 +8,8 @@ export const Route = createFileRoute("/team")({
 
 const founders = [
   { n: "Kareem Abdur-Rashid", r: "Co-Founder & CEO", d: "Founded KCT, raised several funding rounds, 9 years of industry experience." },
-  { n: "Dr. Kamal Abdur-Rashid", r: "Co-Founder & Acting CSO", d: "Founded several technology companies. Over 62 issued patents." },
-  { n: "Dr. Wenli Jia", r: "Co-Founder & Scientist", d: "Over 30 years in academia and industry. Over 40 peer-reviewed publications." },
-];
-const advisors = [
-  { n: "Allison Rosenthal", r: "Commercial Advisor", d: "Clinical development and out-licensing in CNS — Otsuka & Compass." },
-  { n: "Lisa Clarke", r: "Commercial Advisor", d: "Commercial Director at Pfizer – Opioids." },
-  { n: "Tamas Szederkenyi", r: "Commercial Advisor", d: "CSO of a CNS biotech program from start to phase 2." },
-  { n: "Ruth Ross", r: "Scientific Advisory Board", d: "Chair of Pharmacology and Toxicology at UofT; 35+ years studying target receptors and ion channels." },
+  { n: "Dr. Kamal Abdur-Rashid", r: "Co-Founder & Acting CSO", d: "Founded several technology companies." },
+  { n: "Dr. Wenli Jia", r: "Co-Founder & Scientist", d: "Expert synthetic chemist." },
 ];
 
 function Card({ n, r, d }: { n: string; r: string; d: string }) {
@@ -33,12 +27,11 @@ function Card({ n, r, d }: { n: string; r: string; d: string }) {
 function Team() {
   return (
     <SiteShell>
-      <PageHeader eyebrow="People" title="Experienced builders of chemistry and medicine" intro="Our team has previously commercialized technologies with Firmenich, Teva, Merck and Apotex." />
+      <PageHeader eyebrow="People" title="Experienced builders of chemistry and medicine" intro="Our team has previously commercialized technologies with Firmenich, Teva, Merck and Apotex. With over 62 issued patents and 40 peer-reviewed publications; and decades of experience in academia and industry." />
       <section className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="text-2xl font-semibold">Founders</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-3">{founders.map((f) => <Card key={f.n} {...f} />)}</div>
         <h2 className="mt-16 text-2xl font-semibold">Advisors</h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">{advisors.map((f) => <Card key={f.n} {...f} />)}</div>
       </section>
     </SiteShell>
   );

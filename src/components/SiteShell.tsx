@@ -33,23 +33,19 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <footer className="border-t bg-secondary">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-muted-foreground md:flex-row md:justify-between">
           <p>© 2026 Kare Pharma · Ontario's next major therapeutics platform</p>
-          <p>
-            <a href="mailto:kareem@karechem.com" className="hover:text-primary">kareem@karechem.com</a> ·{" "}
-            <a href="https://www.karechem.com/" className="hover:text-primary">karechem.com</a>
-          </p>
         </div>
       </footer>
     </div>
   );
 }
 
-export function PageHeader({ eyebrow, title, intro }: { eyebrow: string; title: string; intro: string }) {
+export function PageHeader({ eyebrow, title, intro }: { eyebrow?: string; title: string; intro?: string }) {
   return (
     <section className="border-b bg-secondary">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <p className="text-sm font-semibold uppercase tracking-widest text-primary">{eyebrow}</p>
-        <h1 className="mt-3 max-w-3xl text-4xl font-semibold md:text-5xl">{title}</h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{intro}</p>
+          {eyebrow && <p className="text-sm font-semibold uppercase tracking-widest text-primary">{eyebrow}</p>}
+          <h1 className={`${eyebrow ? "mt-3 " : ""}max-w-3xl text-4xl font-semibold md:text-5xl`}>{title}</h1>
+          {intro && <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{intro}</p>}
       </div>
     </section>
   );
