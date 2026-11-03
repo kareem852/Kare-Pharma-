@@ -9,7 +9,7 @@ export const Route = createFileRoute("/pipeline")({
 function Pipeline() {
   return (
     <SiteShell>
-      <PageHeader eyebrow="Therapeutic value" title="Improving outcomes and quality of life" intro="Similar drugs and natural product structures are well accepted for epilepsy and show broad utility across neurological and metabolic conditions." />
+      <PageHeader eyebrow="Therapeutic value" title="Improving outcomes and quality of life" intro="Similar drugs and natural product structures are well accepted for epilepsy and show broad utility across neurological conditions." />
       <section className="mx-auto grid max-w-6xl gap-6 px-6 py-16 md:grid-cols-2">
         <article className="rounded-2xl border bg-card p-8">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Epilepsy</p>

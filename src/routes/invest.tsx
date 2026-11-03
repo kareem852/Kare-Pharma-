@@ -31,7 +31,6 @@ function Invest() {
           <h2 className="text-3xl font-semibold">Get in touch</h2>
           <div className="mt-6 flex flex-wrap gap-6 font-medium">
             <a href="mailto:info@karepharma.ca" className="underline-offset-4 hover:underline">info@karepharma.ca</a>
-            <a href="https://karepharma.ca/" className="underline-offset-4 hover:underline">karepharma.ca</a>
           </div>
         </div>
       </section>
