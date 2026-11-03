@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Shared page headers support optional introductory text and eyebrow labels so standalone page titles do not leave empty spacing.
+- Founder portraits are sourced from the presentation and served through asset pointer imports so original media stays outside the source tree.

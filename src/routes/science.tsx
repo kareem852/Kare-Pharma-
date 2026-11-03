@@ -17,8 +17,7 @@ function Science() {
         <div className="space-y-6 text-muted-foreground">
           <h2 className="text-2xl font-semibold text-foreground">Pre-clinical toolkit for novel drugs</h2>
           <p>Structural control lets us modify Epidiolex and related compounds into New Chemical Entities from cheap, abundant and readily available agricultural waste.</p>
-          <p>We use literature data to target receptors in novel ways — eliminating psychoactivity and reducing or removing tolerance.</p>
-          <p>Patented methods for modifications including chirality and deuterium can have substantial impact on pharmacology, enabling families of small molecules.</p>
+          <p>Patented methods of modifications can have substantial impact on pharmacology, enabling families of small molecules with tailored effects.</p>
         </div>
         <div className="space-y-6">
           <div className="rounded-xl border bg-card p-6">
@@ -28,7 +27,7 @@ function Science() {
             <div className="mt-4 flex flex-wrap gap-2">{channels.map((r) => <span key={r} className="rounded-full bg-accent px-3 py-1 text-sm text-accent-foreground">{r}</span>)}</div>
           </div>
           <div className="rounded-xl border bg-card p-6">
-            <h3 className="font-semibold">Manufacturing</h3>
+            <h3 className="font-semibold">Technology Validation</h3>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>• Produced in 50 kg batches</li>
               <li>• 10-ton annual GMP capacity with commercial partners</li>
