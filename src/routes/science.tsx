@@ -37,13 +37,6 @@ function Science() {
           </div>
         </div>
       </section>
-      <section className="border-t bg-secondary">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-citrus">Proof point</p>
-          <h2 className="mt-2 text-3xl font-semibold">KLS-13019</h2>
-          <p className="mt-4 max-w-3xl text-muted-foreground">An Epidiolex analogue made with Kare's technology — 200× more effective than Epidiolex for chemotherapy-induced peripheral neuropathy (CIPN). Shown to prevent and reverse the condition, and also capable of treating Parkinson's disease at phase 1.</p>
-        </div>
-      </section>
     </SiteShell>
   );
 }
