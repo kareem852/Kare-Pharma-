@@ -1,22 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell, PageHeader, meta } from "@/components/SiteShell";
+import kareemPhoto from "@/assets/kareem-abdur-rashid.asset.json";
+import kamalPhoto from "@/assets/kamal-abdur-rashid.asset.json";
+import wenliPhoto from "@/assets/wenli-jia.asset.json";
 
 export const Route = createFileRoute("/team")({
-  head: () => meta("Team — Kare Pharma", "Meet Kare Pharma's founders, commercial advisors and scientific advisory board."),
+  head: () => meta("Team — Kare Pharma", "Meet Kare Pharma's founders, with decades of experience in chemistry and medicine, over 62 issued patents and 40 peer-reviewed publications."),
   component: Team,
 });
 
 const founders = [
-  { n: "Kareem Abdur-Rashid", r: "Co-Founder & CEO", d: "Founded KCT, raised several funding rounds, 9 years of industry experience." },
-  { n: "Dr. Kamal Abdur-Rashid", r: "Co-Founder & Acting CSO", d: "Founded several technology companies." },
-  { n: "Dr. Wenli Jia", r: "Co-Founder & Scientist", d: "Expert synthetic chemist." },
+  { n: "Kareem Abdur-Rashid", r: "Co-Founder & CEO", d: "Founded KCT, raised several funding rounds, 9 years of industry experience.", photo: kareemPhoto.url },
+  { n: "Dr. Kamal Abdur-Rashid", r: "Co-Founder & Acting CSO", d: "Founded several technology companies.", photo: kamalPhoto.url },
+  { n: "Dr. Wenli Jia", r: "Co-Founder & Scientist", d: "Expert synthetic chemist.", photo: wenliPhoto.url },
 ];
 
-function Card({ n, r, d }: { n: string; r: string; d: string }) {
-  const initials = n.replace("Dr. ", "").split(" ").map((w) => w[0]).slice(0, 2).join("");
+function Card({ n, r, d, photo }: { n: string; r: string; d: string; photo: string }) {
   return (
     <div className="rounded-xl border bg-card p-6">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent font-display font-semibold text-accent-foreground">{initials}</div>
+      <img src={photo} alt={n} width={160} height={160} className="h-40 w-40 max-w-full rounded-lg object-cover object-top" />
       <h3 className="mt-4 text-lg font-semibold">{n}</h3>
       <p className="text-sm font-medium text-primary">{r}</p>
       <p className="mt-3 text-sm text-muted-foreground">{d}</p>
