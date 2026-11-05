@@ -111,6 +111,21 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  // After a new version is published, old page files disappear; reload once to fetch the new ones.
+  useEffect(() => {
+    const onPreloadError = () => {
+      if (sessionStorage.getItem("chunk-reload")) return;
+      sessionStorage.setItem("chunk-reload", "1");
+      window.location.reload();
+    };
+    window.addEventListener("vite:preloadError", onPreloadError);
+    const t = setTimeout(() => sessionStorage.removeItem("chunk-reload"), 10000);
+    return () => {
+      window.removeEventListener("vite:preloadError", onPreloadError);
+      clearTimeout(t);
+    };
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
