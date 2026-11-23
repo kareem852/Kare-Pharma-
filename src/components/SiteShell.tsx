@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import logoAsset from "@/assets/kare-pharma-logo.asset.json";
 
 const nav = [
   { to: "/science", label: "Science" },
@@ -13,9 +14,11 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-20 border-b bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold">
-            <span className="h-3 w-3 rounded-full bg-citrus" />
-            Kare <span className="font-normal text-muted-foreground">Pharma</span>
+          <Link to="/" className="flex items-center gap-2.5">
+            <img src={logoAsset.url} alt="Kare Pharma logo" className="h-9 w-auto" />
+            <span className="font-display text-xl font-semibold">
+              Kare <span className="font-normal text-muted-foreground">Pharma</span>
+            </span>
           </Link>
           <nav className="hidden gap-8 text-sm md:flex">
             {nav.map((n) => (
