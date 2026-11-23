@@ -22,7 +22,9 @@ jobs:
       - name: Install dependencies
         run: bun install
       - name: Build site
-        run: bun run build
+        run: 
+        bun run build
+        touch .output/public/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
